@@ -17,5 +17,16 @@ public class Tester{
       System.out.println(b.toString());
       b.withdraw(501); // Withdraw 501 - Balance shouldn't change (exceeds bal)
       System.out.println(b.toString());
+
+      // To test authenticate make method public
+      // System.out.println("Do these passwords match " + b.authenticate("Assignment12"));
+
+      BankAccount b2 = new BankAccount(2543125, "Assignment13");
+      boolean su =  b.transferTo(b2,100,"Assignment12"); // Transfer 100 - Balances should be 400,100
+      System.out.println("Is transfer successful? " + su);
+      System.out.println(b.toString());
+      System.out.println(b2.toString());
+
+
     }
 }
